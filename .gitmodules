@@ -2,63 +2,78 @@
 	path = src/modules/mavlink/mavlink
 	url = https://github.com/mavlink/mavlink.git
 	branch = master
-[submodule "src/drivers/uavcan/libuavcan"]
-	path = src/drivers/uavcan/libuavcan
-	url = https://github.com/dronecan/libuavcan.git
-	branch = main
-[submodule "Tools/simulation/jmavsim/jMAVSim"]
-	path = Tools/simulation/jmavsim/jMAVSim
-	url = https://github.com/PX4/jMAVSim.git
-	branch = main
-[submodule "Tools/simulation/gazebo-classic/sitl_gazebo-classic"]
-	path = Tools/simulation/gazebo-classic/sitl_gazebo-classic
-	url = https://github.com/PX4/PX4-SITL_gazebo-classic.git
-	branch = main
-[submodule "src/drivers/gps/devices"]
-	path = src/drivers/gps/devices
-	url = https://github.com/PX4/PX4-GPSDrivers.git
-	branch = main
-[submodule "platforms/nuttx/NuttX/nuttx"]
-	path = platforms/nuttx/NuttX/nuttx
-	url = https://github.com/PX4/NuttX.git
-	branch = px4_firmware_nuttx-10.3.0+-v1.14
-[submodule "platforms/nuttx/NuttX/apps"]
-	path = platforms/nuttx/NuttX/apps
-	url = https://github.com/PX4/NuttX-apps.git
-	branch = px4_firmware_nuttx-10.3.0+
+	
 [submodule "Tools/flightgear_bridge"]
 	path = Tools/simulation/flightgear/flightgear_bridge
-	url = https://github.com/PX4/PX4-FlightGear-Bridge.git
+	url = https://gitee.com/seokhb/PX4-FlightGear-Bridge.git
+	
+[submodule "Tools/simulation/gazebo-classic/sitl_gazebo-classic"]
+	path = Tools/simulation/gazebo-classic/sitl_gazebo-classic
+	url = https://gitee.com/seokhb/PX4-SITL_gazebo-classic.git
+	branch = main
+	
+[submodule "Tools/simulation/jmavsim/jMAVSim"]
+	path = Tools/simulation/jmavsim/jMAVSim
+	url = https://gitee.com/seokhb/jMAVSim.git
+	branch = main
+	
 [submodule "Tools/simulation/jsbsim/jsbsim_bridge"]
 	path = Tools/simulation/jsbsim/jsbsim_bridge
-	url = https://github.com/PX4/px4-jsbsim-bridge.git
-[submodule "src/drivers/cyphal/libcanard"]
-	path = src/drivers/cyphal/libcanard
-	url = https://github.com/opencyphal/libcanard.git
+	url = https://gitee.com/seokhb/px4-jsbsim-bridge.git
+	
+[submodule "platforms/nuttx/NuttX/apps"]
+	path = platforms/nuttx/NuttX/apps
+	url = https://gitee.com/seokhb/NuttX-apps.git
+	branch = px4_firmware_nuttx-10.3.0+
+	
+[submodule "platforms/nuttx/NuttX/nuttx"]
+	path = platforms/nuttx/NuttX/nuttx
+	url = https://gitee.com/seokhb/NuttX.git
+	branch = px4_firmware_nuttx-10.3.0+-v1.14
+
 [submodule "src/drivers/cyphal/public_regulated_data_types"]
 	path = src/drivers/cyphal/public_regulated_data_types
-	url = https://github.com/opencyphal/public_regulated_data_types.git
+	url = https://gitee.com/seokhb/public_regulated_data_types.git
+	
 [submodule "src/drivers/cyphal/legacy_data_types"]
 	path = src/drivers/cyphal/legacy_data_types
-	url = https://github.com/PX4/public_regulated_data_types.git
+	url = https://gitee.com/jiyuanwangxs/legacy_data_types.git
 	branch = legacy
-[submodule "src/lib/crypto/monocypher"]
-	path = src/lib/crypto/monocypher
-	url = https://github.com/PX4/Monocypher.git
-	branch = px4
-[submodule "src/lib/events/libevents"]
-	path = src/lib/events/libevents
-	url = https://github.com/mavlink/libevents.git
+
+[submodule "src/drivers/cyphal/libcanard"]
+	path = src/drivers/cyphal/libcanard
+	url = https://gitee.com/seokhb/libcanard.git
+	
+[submodule "src/drivers/gps/devices"]
+	path = src/drivers/gps/devices
+	url = https://gitee.com/seokhb/PX4-GPSDrivers.git
 	branch = main
+	
+[submodule "src/drivers/uavcan/libuavcan"]
+	path = src/drivers/uavcan/libuavcan
+	url = https://gitee.com/seokhb/libuavcan.git
+	
 [submodule "src/lib/crypto/libtomcrypt"]
 	path = src/lib/crypto/libtomcrypt
-	url = https://github.com/PX4/libtomcrypt.git
+	url = https://gitee.com/seokhb/libtomcrypt.git
 	branch = px4
+	
 [submodule "src/lib/crypto/libtommath"]
 	path = src/lib/crypto/libtommath
-	url = https://github.com/PX4/libtommath.git
+	url = https://gitee.com/seokhb/libtommath.git
 	branch = px4
+	
+[submodule "src/lib/crypto/monocypher"]
+	path = src/lib/crypto/monocypher
+	url = https://gitee.com/seokhb/Monocypher.git
+	branch = px4
+	
+[submodule "src/lib/events/libevents"]
+	path = src/lib/events/libevents
+	url = https://gitee.com/seokhb/libevents.git
+	branch = main
+
 [submodule "src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client"]
 	path = src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client
-	url = https://github.com/PX4/Micro-XRCE-DDS-Client.git
+	url = https://gitee.com/seokhb/Micro-XRCE-DDS-Client.git
 	branch = px4
