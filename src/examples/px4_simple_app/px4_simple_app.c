@@ -30,7 +30,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  ****************************************************************************/
-// hi ,welcome，just a simple test
+
 /**
  * @file px4_simple_app.c
  * Minimal application example for PX4 autopilot

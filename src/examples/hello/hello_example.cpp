@@ -32,6 +32,8 @@
  *
  ****************************************************************************/
 
+
+// hello, my friend
 /**
  * @file hello_example.cpp
  * Example for Linux
