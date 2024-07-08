@@ -33,7 +33,7 @@
  ****************************************************************************/
 
 
-// hello, my friend
+// hello, my friend,hello ,fine,hi, hi
 /**
  * @file hello_example.cpp
  * Example for Linux
