@@ -112,8 +112,8 @@ void
 MulticopterAttitudeControl::generate_attitude_setpoint(const Quatf &q, float dt, bool reset_yaw_sp)
 {
 	vehicle_attitude_setpoint_s attitude_setpoint{};
-	const float yaw = Eulerf(q).psi();
-
+	const float yaw = Eulerf(q).psi();//偏航角
+	//期望的偏航角速率=遥控器偏航输入*最大偏航角速率
 	attitude_setpoint.yaw_sp_move_rate = _manual_control_setpoint.yaw * math::radians(_param_mpc_man_y_max.get());
 
 	// Avoid accumulating absolute yaw error with arming stick gesture in case heading_good_for_control stays true
@@ -123,9 +123,9 @@ MulticopterAttitudeControl::generate_attitude_setpoint(const Quatf &q, float dt,
 
 	// Make sure not absolute heading error builds up
 	if (reset_yaw_sp) {
-		_man_yaw_sp = yaw;
+		_man_yaw_sp = yaw;//如果需要重置的话将期望偏航角重置为当前偏航角
 
-	} else {
+	} else {//根据期望偏航角速率计算期望偏航角(求积分)
 		_man_yaw_sp = wrap_pi(_man_yaw_sp + attitude_setpoint.yaw_sp_move_rate * dt);
 	}
 
@@ -156,7 +156,7 @@ MulticopterAttitudeControl::generate_attitude_setpoint(const Quatf &q, float dt,
 	// This is the formula by how much the yaw changes:
 	//   let a := tilt angle, b := atan(y/x) (direction of maximum tilt)
 	//   yaw = atan(-2 * sin(b) * cos(b) * sin^2(a/2) / (1 - 2 * cos^2(b) * sin^2(a/2))).
-	const Quatf q_sp_yaw(cosf(_man_yaw_sp / 2.f), 0.f, 0.f, sinf(_man_yaw_sp / 2.f));
+	const Quatf q_sp_yaw(cosf(_man_yaw_sp / 2.f), 0.f, 0.f, sinf(_man_yaw_sp / 2.f));//期望的偏航角四元数表示？
 
 	if (_vtol) {
 		// Modify the setpoints for roll and pitch such that they reflect the user's intention even
@@ -168,7 +168,7 @@ MulticopterAttitudeControl::generate_attitude_setpoint(const Quatf &q, float dt,
 	}
 
 	// Align the desired tilt with the yaw setpoint
-	Quatf q_sp = q_sp_yaw * q_sp_rp;
+	Quatf q_sp = q_sp_yaw * q_sp_rp;//航向角和俯仰角，乘偏航角，意为飞行方向按照偏航方向改变
 
 	q_sp.copyTo(attitude_setpoint.q_d);
 
